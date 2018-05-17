@@ -1,0 +1,13 @@
+<h1>Add a Ingredient</h1>
+
+<%= simple_form_for [@cocktail, @dose] do |f|
+ %>
+
+  <div class="ingredient-box">
+    <%= f.input :description %>
+    <%= f.association :ingredient, as: :radio_buttons %>
+  </div>
+  <%= f.submit "Create", class: "btn btn-primary" %>
+
+  <!-- [...] all the fields -->
+<% end %>

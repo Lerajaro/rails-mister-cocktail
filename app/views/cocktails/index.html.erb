@@ -1,0 +1,10 @@
+<h1>Cocktails</h1>
+<p>Find me in app/views/cocktails/index.html.erb</p>
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Create new Cocktail', new_cocktail_path %>
