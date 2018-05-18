@@ -13,12 +13,6 @@
   <% end %>
 
   <%= f.input :name %>
-  <div class="ingredient-box">
-    <%= f.association :ingredients, as: :check_boxes %>
-    <%= f.association :doses %>
-  </div>
-
-
 
   <%= f.submit "Create", class: "btn btn-primary" %>
 
