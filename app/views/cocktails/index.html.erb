@@ -3,13 +3,19 @@
 
 <ul>
   <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
+    <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+      <% if cocktail.photo != nil %>
+       <%= image_tag cocktail.photo.url(:bright_face) %>
+      <% end %>
+    </li>
   <% end %>
 </ul>
 
 <%= link_to 'Create new Cocktail', new_cocktail_path %>
 
-<%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
+
+
+<%= cl_image_tag("p5giba4oku4nymxdxgju",
       width: 400, height: 300, crop: :fill) %>
-<%= cl_image_tag("IMAGE_WITH_FACE_ID",
+<%= cl_image_tag("vf9hytevmjyod8mbhmdx",
       width: 150, height: 150, crop: :thumb, gravity: :face) %>
